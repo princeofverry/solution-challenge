@@ -25,5 +25,8 @@ function removeSmallest(numbers) {
       result.push(numbers[i]);
     }
   }
+  // solusi lain
+  // const result = numbers.slice(); // Create a shallow copy of the original array
+  //   result.splice(minIndex, 1);
   return result;
 }
