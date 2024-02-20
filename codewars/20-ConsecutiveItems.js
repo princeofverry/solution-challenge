@@ -13,3 +13,14 @@ function consecutive(arr, a, b) {
   }
   return false;
 }
+
+function consecutive(arr, a, b) {
+  const idxA = arr.indexOf(a);
+  const idxB = arr.indexOf(b);
+
+  return Math.abs(idxA - idxB) === 1;
+}
+
+function consecutive(arr, a, b) {
+  return Math.abs(arr.indexOf(a) - arr.indexOf(b)) == 1;
+}
