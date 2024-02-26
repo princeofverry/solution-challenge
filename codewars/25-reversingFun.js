@@ -19,3 +19,23 @@ function flipNumber(str) {
   }
   return result.join(""); // Convert the array back to a string and return
 }
+
+// solusi lain paling masuk akal
+function flipNumber(string) {
+  let out = [];
+  let chars = string.split("");
+
+  while (chars.length) {
+    out.push(chars.reverse().shift());
+  }
+
+  return out.join("");
+}
+
+// solusi rekursif
+function flipNumber(n) {
+  if (n.length === 1) return n;
+
+  n = n.split("").reverse().join("");
+  return n[0] + flipNumber(n.substr(1));
+}
