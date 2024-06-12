@@ -16,4 +16,16 @@ class Solution(object):
 
         # left array product 1 inklusif = 1
         for i in range(1, n):
-            leftProduct = leftProduct[i - 1] * nums[i - 1]
+            leftProduct[i] = leftProduct[i - 1] * nums[i - 1]
+        
+        # right array product, -1 tengah maksudnya itu eksklusif
+        # ibaratnya kayak >-1
+        # kl yg paling kanan maksudnya stepnya
+        for i in range(n-2, -1, -1):
+            rightProduct[i] = rightProduct[i + 1] * nums[i + 1]
+        
+        for i in range(n):
+            result[i] = rightProduct[i] * leftProduct[i]
+
+        return result
+
