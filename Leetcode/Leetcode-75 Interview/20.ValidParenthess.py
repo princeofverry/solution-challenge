@@ -20,4 +20,8 @@ class Solution(object):
                 # return false
                 if stack == [] or d[stack.pop()] != char:
                     return False
+                
+        # posisi akhir stack selalu kosong karena 
+        # selalu di pop untuk memereiksa huruf 
+        # selanjutnya
         return True if stack == [] else False
