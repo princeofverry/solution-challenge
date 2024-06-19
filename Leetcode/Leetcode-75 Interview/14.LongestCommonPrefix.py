@@ -1,3 +1,5 @@
+# vertical scaning easy problem
+
 class Solution(object):
     def longestCommonPrefix(self, strs):
         """
